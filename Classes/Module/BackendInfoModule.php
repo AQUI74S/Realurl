@@ -105,8 +105,6 @@ class Tx_Realurl_Module_BackendInfoModule extends tx_realurl_modfunc1 {
 			$GLOBALS['LANG']->getLL('backendInfoModule.markVisibleTreeAsDirty') . '" name="_action_dirtyvisible">';
 		$theOutput .= '<br /><input type="submit" value="' .
 			$GLOBALS['LANG']->getLL('backendInfoModule.clearCompleteHistoryCache') . '" name="_action_clearallhistory">';
-		$theOutput .= '<br /><input type="submit" value="' .
-			$GLOBALS['LANG']->getLL('backendInfoModule.regeneratePaths') . '" name="_action_regenerate"></td><td valign="top">';
 		$theOutput .= '<h3>' . $GLOBALS['LANG']->getLL('backendInfoModule.colors') . '</h3>';
 		$theOutput .= '<table border="0">';
 		$theOutput .= '<tr><td class="c-ok">' . $GLOBALS['LANG']->getLL('backendInfoModule.cacheFound') . '</td></tr>';
@@ -195,10 +193,6 @@ class Tx_Realurl_Module_BackendInfoModule extends tx_realurl_modfunc1 {
 				}
 
 				$langId = $language['uid'];
-				if (\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('_action_regenerate') !== '') {
-					$url = \TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_SITE_URL') . 'index.php?id=' . $editUid . '&no_cache=1&L=' . $langId;
-					fopen($url, 'r');
-				}
 				$info = '';
 				$params = '&edit[pages][' . $editUid . ']=edit';
 

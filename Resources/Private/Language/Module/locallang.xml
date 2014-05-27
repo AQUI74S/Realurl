@@ -13,7 +13,6 @@
 			<label index="backendInfoModule.clearVisibleTree">Clear visible tree</label>
 			<label index="backendInfoModule.markVisibleTreeAsDirty">Mark visible tree as dirty</label>
 			<label index="backendInfoModule.clearCompleteHistoryCache">Clear complete history cache</label>
-			<label index="backendInfoModule.regeneratePaths">Regenerate paths (FE calls)</label>
 			<label index="backendInfoModule.colors">Colors:</label>
 			<label index="backendInfoModule.cacheFound">Cache found</label>
 			<label index="backendInfoModule.cacheExpired">Cache expired</label>
